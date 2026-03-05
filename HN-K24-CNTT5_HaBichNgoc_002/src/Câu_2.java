@@ -10,16 +10,16 @@ public class Câu_2 {
             return;
         }
 
-        str = str.toLowerCase();
-        Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < str.length(); i++) {
-            char c = str.charAt(i);
+    str = str.toLowerCase();
+    Map<Character, Integer> map = new HashMap<>();
+    for (int i = 0; i < str.length(); i++) {
+        char c = str.charAt(i);
 
-            if (c == ' ') continue;
+        if (c == ' ') continue;
 
-            if (map.containsKey(c)) {
-                int count = map.get(c);
-                map.put(c, count + 1);
+        if (map.containsKey(c)) {
+            int count = map.get(c);
+            map.put(c, count + 1);
             } else {
                 map.put(c, 1);
             }
@@ -29,4 +29,5 @@ public class Câu_2 {
             System.out.println("Ky tu " + key + ": " + map.get(key) + " lan");
         }
     }
+
 }
